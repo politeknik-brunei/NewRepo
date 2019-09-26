@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Total Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="c">
+    <h1>Duration:</h1>
+    <br>
+    <h6>1 Hour</h6>
+    <br>
+    <h1>Your total payment is:</h1>
+    <br>
+     <h6> {{currencyIcon}}{{paymentAmount}} </h6>
+  </div>
+
+  <ion-tabs>
+      <ion-tab-bar slot="bottom" class="colour">
+        <ion-tab-button tab="CP" (click)="payWithPaypal()">
+          <ion-label class="font"> Confirm Payment</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+</ion-content>

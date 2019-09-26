@@ -1,0 +1,56 @@
+//Header and toolbar
+
+ion-toolbar{
+    box-shadow: 0 6px 2px -2px rgba(0,0,0,.2);
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 0px;
+    padding-top: 2px;
+    height: 50px;
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+}
+
+
+
+
+img {
+    height: 20%;
+    width: 30%;
+}
+
+.btn {
+  
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 200px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  }
+
+
+ion-content{
+
+    --ion-background-color: #5BC2E7;
+}
+
+p{
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+ion-header{
+    text-align: center;
+    font-weight: 500;
+}

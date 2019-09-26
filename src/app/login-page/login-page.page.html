@@ -1,0 +1,64 @@
+
+<ion-header translucent="true">
+  <ion-toolbar>
+
+    <div class="column">
+            <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </div>
+
+        <div class="column">
+          <h1>LOGIN</h1>
+        
+        </div>
+        
+    <!-- <ion-title text-center> -->
+        <!-- <img class="displayed" src="assets/bytheway.png" alt="logo" style="width:150px;height:150px;"> -->
+        <!-- Login
+    
+    </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="loginForm">
+  
+      <ion-item>      
+        <ion-label position="floating">Username</ion-label>
+        <ion-input formControlName="username"  type="text"  placeholder="username" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.username">
+          <div class="error-message" *ngIf="loginForm.get('username').hasError(error.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      
+      <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input formControlName="password"  type="password" placeholder="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-message" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+ <section>
+  <ion-button (click)="login()" [disabled]="!loginForm.valid"  fill="solid" expand="block" color="primary">Login</ion-button>
+
+  
+  <ion-button expand="block" fill="clear" color="dark"  href="/signup-page">Don't have an account? Create one</ion-button>
+   
+  <ion-button expand="block" fill="clear" color="dark" (click)="resetPassword('hello@angularfirebase.com')">Forgot Password?</ion-button>
+  
+  </section>
+  
+</form>
+</ion-content>

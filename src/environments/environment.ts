@@ -3,9 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+   firebase: {
+    apiKey: "AIzaSyBkIuEsqdsVRuWFUEoQyhM4dR0QyzhJdow",
+    authDomain: "gpstrack1.firebaseapp.com",
+    databaseURL: "https://gpstrack1.firebaseio.com",
+    projectId: "gpstrack1",
+    storageBucket: "gpstrack1.appspot.com",
+    messagingSenderId: "464238179692",
+    appId: "1:464238179692:web:27555a72a75ae2d5"
+  }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

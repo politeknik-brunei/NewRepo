@@ -1,0 +1,136 @@
+<ion-header>
+ 
+  <ion-toolbar>
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/homepage']">
+                 
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>Water Taxi</h4>
+          
+          </div>
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content fullscreen>
+
+  <div class="selaid">
+
+    <ion-slides pager="true" [options]="slideOpts" >
+      <ion-slide>
+        <img src="assets\w2.jpg" >
+    </ion-slide>
+  
+
+
+        <ion-slide>
+          <img src="assets\w1.jpg" >
+      </ion-slide>
+
+          <ion-slide>
+            <img src="assets\water.jpg" >
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets\w4.jpg" >
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets\w5.jpg" >
+        </ion-slide>
+
+
+        <ion-slide>
+            <img src="assets\w6.jpg" >
+        </ion-slide>
+
+  </ion-slides>
+
+</div>
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+<div class="meja">
+      <div class="dropdown">
+          <ion-button class="dropbtn" expand="full">Show Fares</ion-button>
+          <div class="dropdown-content">
+              
+              <tr>
+                <th>
+                  Location:
+                </th>
+                <th>
+                  Fares
+                </th>
+              </tr>
+
+              <tr>
+                <td>
+                  Yayasan Dock
+                </td>
+                <td>
+                  $1.00 PER TRIP
+                </td>
+              </tr>
+            
+
+              <tr>
+                  <td>
+                    Kianggeh Dock
+                  </td>
+                  <td>
+                    $3.00 PER TRIP
+                  </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                      Pintu Malim Dock
+                    </td>
+                    <td>
+                      $5.00 PER TRIP
+                    </td>
+                  </tr>
+                 
+          
+
+
+          </div>
+        
+         <div class="batan">
+          <ion-button expand="full">Show location</ion-button>
+        </div>
+
+
+
+      <!-- <div class="column1"></div> -->
+
+  </div>
+</div>
+
+  
+
+
+
+    </ion-content>
+

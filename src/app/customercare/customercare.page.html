@@ -1,0 +1,58 @@
+<ion-header>
+ 
+  <ion-toolbar>
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/homepage']">
+                 
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>Customer Care</h4>
+            <!-- <img src="assets\bytheway.png"> -->
+          
+          </div>
+              
+
+          <div class="column">
+              <img src="assets\custser.png">
+            </div>
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding fullscreen>
+
+  <!-- FOR CALLING -->
+<h4>Please contact us through our hotline.</h4>
+  <ion-button (click)="call()">
+    <ion-icon name="call"></ion-icon>
+    Call
+  </ion-button>
+
+<ion-button full color="secondary" (click) = "senSMS()">SMS</ion-button>
+
+
+ <div class="email"> 
+<h4>Via email</h4>
+<ion-button (click)="OpenEmailComposer()" fill="clear"><img src="assets\gmail.png"></ion-button>
+<!-- <img src="assets\gmail.png" href="mailto:bytheway@gmail.com"> -->
+
+</div>
+
+
+
+</ion-content>

@@ -1,0 +1,148 @@
+<ion-header>
+ 
+  <ion-toolbar>
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/homepage']">
+                 
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>BUS TYPES</h4>
+            <!-- <img src="assets\bytheway.png"> -->
+          
+          </div>
+              
+<!-- 
+          <div class="column">
+              <img src="assets\custser.png">
+            </div> -->
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+
+<ion-content padding class="img" >
+
+    <ion-card>
+    
+        <ion-card-header>
+            <ion-card-title>Bus Fares</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Senior Citizens: BND$0.50
+          </ion-card-content>
+
+          <ion-card-content>
+              Adult and Children: BND$1.00
+          </ion-card-content>
+   
+  </ion-card>
+
+
+  <span>
+      <h6>Bus Types</h6>
+  </span>
+
+  <span>
+      <h6>Bus Number</h6> 
+  </span>
+
+
+  <ion-list id="takan">
+<div>
+    <ion-button fill="no fill" [routerLink]="['/bus1map']">
+        <ion-item>
+           <img src="../../assets/Turqoise.png">
+         </ion-item>
+    </ion-button>
+
+    <span>circle</span>
+    <!-- <span>01A, 01C</span> -->
+</div>
+
+
+
+
+    
+<div>
+    <ion-button fill="no fill" [routerLink]="['/bus2map']">
+        <ion-item>
+           <img src="../../assets/Choc.png">
+         </ion-item>
+    </ion-button> 
+    
+    <span>Central Business</span>
+</div>
+
+
+<div>
+    <ion-button fill="no fill">
+        <ion-item>
+           <img src="../../assets/green.png">
+         </ion-item>
+     </ion-button>
+
+     <span>Northern</span>
+
+    
+    </div>
+ 
+
+<div>
+    <ion-button fill="no fill">
+        <ion-item>
+          <img src="../../assets/blue.png">
+        </ion-item>
+    </ion-button>
+
+    <span>Eastern</span>
+</div>
+
+
+<div>
+    <ion-button fill="no fill">
+        <ion-item>
+           <img src="../../assets/grey.png">
+         </ion-item>
+    </ion-button>
+
+    <span>Southern</span>
+</div>
+ 
+<div>
+    <ion-button fill="no fill">
+        <ion-item>
+         <img src="../../assets/purple.png">
+        </ion-item>
+     </ion-button>  
+     
+     <span>Western</span>
+</div>
+
+  
+
+
+  </ion-list>
+  
+
+  <ion-button [routerLink]="['/home']">
+    <ion-icon name="locate"></ion-icon>
+  </ion-button>
+</ion-content>

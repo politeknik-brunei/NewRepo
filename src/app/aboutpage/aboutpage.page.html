@@ -1,0 +1,70 @@
+<ion-header>
+ 
+  <ion-toolbar>
+
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/homepage']">
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>About App</h4>            
+          </div>
+                
+        </div>
+
+  </ion-toolbar> 
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager="true" [options]="slideOpts" >
+
+    <!-- INTRODUCTION -->
+      <ion-slide>
+          <ion-card>
+              <ion-card-header>
+                <ion-card-title>What is BTW?</ion-card-title>
+              </ion-card-header>
+        
+        
+              <ion-card-content>
+                <img src="assets/test.png">
+                <ion-text color="dark">
+                  <h1>By The Way</h1>
+                    Brunei's first mobile application merging all public transportation into one whole mobile application.
+                </ion-text> 
+              </ion-card-content>
+            </ion-card>
+      </ion-slide>
+
+
+        <!-- USERS -->
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                  <ion-card-title>Our target Users.</ion-card-title>
+                </ion-card-header>
+          
+          
+                <ion-card-content>
+                  <div class="t2">
+                    <img src="assets/t2.png">
+                  </div>
+                  <ion-text color="dark">
+                    <h1>Drivers & Individuals</h1>
+                      Drivers and every individual in Brunei can use this mobile application to improve public transportation in Brunei.
+                  </ion-text> 
+                </ion-card-content>
+              </ion-card>
+        </ion-slide>
+
+</ion-slides>
+
+
+</ion-content>

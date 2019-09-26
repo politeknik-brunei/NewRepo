@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <ion-button no fill [routerLink]="['/fare4']">
+          <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-button>Driver details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides>
+
+        <ion-slide>
+            <h2>Nissan</h2>
+          <img src="../../assets/icon/download.jpg" class="pic1">
+          
+          <p>Driver's name :</p>
+          <p>Phone Number :</p>
+          <p>License Plate :</p>
+          <p>Type : </p>
+          
+          <ion-button href="/totalpayment2">Book</ion-button>
+
+        </ion-slide>
+
+        <ion-slide>
+            <h2>Suzuki</h2>
+          <img src="./slide-2.png"/>
+         
+          <p>Driver's name :</p>
+          <p>Phone Number :</p>
+          <p>License Plate :</p>
+          <p>Type : </p>
+
+          <ion-button>
+            Book
+          </ion-button>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="./slide-3.png"/>
+          <h2>What is Ionic Pro?</h2>
+          <p>Driver's name :</p>
+          <p>Phone Number :</p>
+          <p>License Plate :</p>
+          <p>Type : </p>
+
+        </ion-slide>
+
+        <ion-button href="/tp2">Book</ion-button>
+
+        <ion-slide>
+          <img src="./slide-4.png"/>
+          <h2>Ready to Play?</h2>
+          <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+      </ion-slides>
+</ion-content>

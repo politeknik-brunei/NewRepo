@@ -1,0 +1,32 @@
+<ion-header translucent= "true">
+  <ion-toolbar>
+
+    <div class="row">
+      <div class="column">
+              <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+      </div>
+
+<!-- image atas -->
+      <div class="column">
+          <img src="assets/bytheway.png">
+      </div>
+
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <section>
+  <ion-button [routerLink]="['/signup-page']" routerDirection="forward" fill="solid" expand="block" color="light">Sign Up</ion-button>
+  </section>
+
+  <section>
+  <ion-button [routerLink]="['/login-page']" fill="solid" expand="block" color="light" >Login</ion-button>
+  </section>
+
+</ion-content>

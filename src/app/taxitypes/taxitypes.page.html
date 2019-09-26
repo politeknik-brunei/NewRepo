@@ -1,0 +1,57 @@
+<ion-header>
+ 
+  <ion-toolbar>
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/taxihome']">
+                 
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>TAXI TYPES</h4>
+            <!-- <img src="assets\bytheway.png"> -->
+          
+          </div>
+              
+<!-- 
+          <div class="column">
+              <img src="assets\custser.png">
+            </div> -->
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+
+  <p>Choose Preferred taxi types:</p>
+
+  <div class="ion-padding">
+    <ion-button color="light" class="btn" [routerLink]="['/fare4']">
+      <img src="../../assets/icon/Sedan.png"><br><br>
+      4 Seaters
+    </ion-button>
+
+  </div>
+
+  <div>
+    <ion-button color="light" class="btn" [routerLink]="['/fare6']">
+      <img src="../../assets/icon/img_399878.png"><br><br>
+      6 Seaters
+    </ion-button>
+
+  </div>
+</ion-content>

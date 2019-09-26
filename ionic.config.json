@@ -1,5 +1,7 @@
 {
   "name": "zerotemplate",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

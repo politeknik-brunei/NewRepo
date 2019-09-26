@@ -1,0 +1,62 @@
+<ion-header>
+ 
+  <ion-toolbar>
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear" [routerLink] = "['/homepage']">
+                 
+                  <ion-icon name="arrow-back"></ion-icon>
+                  Back
+                 </ion-button>
+          </div>
+
+
+          <div class="column">
+            <h4>Payment Settings</h4>
+            <!-- <img src="assets\bytheway.png"> -->
+          
+          </div>
+              
+
+          <div class="column">
+              <img src="assets\mm.png">
+            </div>
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+
+
+<ion-content padding fullscreen>
+
+
+<ion-card>
+<ion-text color="dark">Select Payment Option.</ion-text>
+
+      <ion-item>
+          <ion-checkbox color="secondary"></ion-checkbox>
+          <ion-icon name="cash"></ion-icon>
+          <ion-label>Cash</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-checkbox color="secondary"></ion-checkbox>
+            <ion-icon name="card"></ion-icon>
+            <ion-label>Cashless Payment</ion-label>
+          </ion-item>
+
+
+          <ion-button expand="block">Save Settings</ion-button>
+        </ion-card>
+</ion-content>

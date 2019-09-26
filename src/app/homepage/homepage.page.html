@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar>
+
+   <!-- Settings button -->
+
+      
+        <div class="row">
+         
+          <div class="column">
+                <ion-button fill="clear">
+                  <ion-menu-button><ion-icon name="settings"></ion-icon></ion-menu-button>
+                </ion-button>
+          </div>
+
+
+          <div class="column"><img src="assets\bytheway.png"></div>
+          <div class="column"></div>
+
+          </div>
+      
+
+  
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content fullscreen>
+
+
+  <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+
+            <ion-text color="dark" >
+                <h1>Select Transportation:</h1>
+                </ion-text>
+                
+                <div class="btn">
+                  
+                <ion-button fill="clear" [routerLink] = "['/bustypes']">
+              
+                  <div class="bawah">
+                    
+                    <img src="assets\bus pointer.png">
+              
+                    <ion-text color="dark" >
+                        <h1>Bus</h1>         
+                    </ion-text>
+              
+                  </div>
+              
+                </ion-button>  
+              
+              </div>
+              
+              
+              
+              
+              <div class="btn">
+                
+               
+                  <ion-button fill="clear" (click) ="presentAlert()">
+                
+                    <div class="bawah">
+                
+                      <img src="assets\taxi.png">
+                
+                      <ion-text color="dark" >
+                          <h1>Taxi</h1>         
+                      </ion-text>
+                
+                    </div>
+                
+                  </ion-button> 
+              
+                </div>
+                
+              
+              
+              <!-- WATERTAXI -->
+                <div class="btn">
+                 
+                    <ion-button fill="clear" [routerLink] = "['/watertaxihome']">
+                  
+                      <div class="bawah">
+                  
+                        <img src="assets\watertaxi.png">
+                  
+                        <ion-text color="dark" >
+                            <h1>Watertaxi</h1>         
+                        </ion-text>
+                  
+                      </div>
+                  
+                    </ion-button>  
+              
+                  </div>
+                    
+    </div >
+
+  
+
+
+
+</ion-content>

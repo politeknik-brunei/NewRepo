@@ -1,0 +1,43 @@
+ion-toolbar{
+    box-shadow: 0 6px 2px -2px rgba(0,0,0,.2);
+  }
+  
+    .column {
+        float: left;
+        width: 33%;
+        padding: 0px;
+        padding-top: 2px;
+        height: 50px;
+
+        h1{
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+  
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  
+  }
+
+
+
+    
+    //BACKGROUND COLOR
+    ion-content{
+        --ion-background-color: #5BC2E7;
+    }
+
+    // ion-content{
+
+    //     --ion-background-color: #5BC2E7;
+    // }
+
+    section {
+        margin-top: 1em;
+        margin-bottom: 2em;
+      }

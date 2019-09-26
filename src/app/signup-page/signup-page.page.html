@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+
+          <div class="row">
+              <div class="column">
+               <ion-buttons slot="start">
+                <ion-back-button></ion-back-button>
+               </ion-buttons>
+              </div>
+        
+
+        <!-- image atas -->
+              <div class="column">
+                <h1>SIGN UP</h1>
+              </div>
+        
+            </div>
+  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text"[(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+      
+      <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+    </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="floating">Gender</ion-label> -->
+        <!-- <ion-input type="gender" [(ngModel)]="gender"></ion-input>
+        <form>
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+          </form>
+    </ion-item> -->
+
+      
+
+    <ion-item>
+        <ion-label position="floating">Date of Birth</ion-label>
+        <ion-input type="date" [(ngModel)]="dob"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input type="tel" [(ngModel)]="phonenumber"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+        <ion-label position="floating">Card Details</ion-label>
+        <ion-input type="number" [(ngModel)]="card"></ion-input>
+        
+    </ion-item> -->
+
+  
+  </ion-list>
+  <section>
+  <ion-button  fill="solid" expand="block" color="primary" (click)="register()">Sign Up</ion-button>
+  </section>
+  
+  <section>
+  <ion-button expand="block" fill="solid" color="primary" href="/login-page"> Login</ion-button>
+  </section>
+</ion-content>
+
