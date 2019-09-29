@@ -6,9 +6,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'
 // import { CallNumber } from '@ionic-native/call-number/ngx';
 import { AngularFireDatabase } from 'angularfire2/database';
-import firebaseConfig from './firebase'
+import {firebaseConfig}  from './credentials';
 import * as firebase from 'firebase/app';
 import { AngularFirestore } from '@angular/fire/firestore'
+
+
 
 @Component({
   selector: 'app-root',
@@ -16,46 +18,6 @@ import { AngularFirestore } from '@angular/fire/firestore'
 })
 
 export class AppComponent {
-
-  public appPages =[
-    
-    {
-      title: "Profile",
-      url: "/userprofile-page",
-      icon:"user"
-    },
-    
-    {
-      title: "Home",
-      url: "/homepage",
-      icon: "home"
-    },
-
-    {
-      title: "Customer Care",
-      url: "/customercare",
-      // icon: "services"
-    },
-
-    {
-      title: "Payment Settings",
-      url: "/paymentsetting"
-      // icon: "account"
-    },
-
-    {
-      title: "About App",
-      url: "/aboutpage"
-      // icon: "account"
-    },
-
-
-    {
-      title: "Logout",
-      url: "/login-page"
-      // icon: "logout"
-    }
-  ];
 
 
   constructor(
@@ -65,7 +27,9 @@ export class AppComponent {
     // private callNumber: CallNumber
     // private readonly afDatabase: AngularFireDatabase,
     private afstore: AngularFirestore,
+    
   ) 
+  
   
   
   {

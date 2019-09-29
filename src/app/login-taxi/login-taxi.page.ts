@@ -4,61 +4,56 @@ import { auth } from 'firebase/app'
 import { FormGroup, FormControl, Validators, FormBuilder, EmailValidator } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { Router } from '@angular/router'
-import { UserService } from '../user.service'
+import { TaxiService } from '../taxi.service'
 import { AngularFirestore } from '@angular/fire/firestore'
 import { LoadingController, AlertController } from '@ionic/angular';
 import { AuthService } from '../auth.service';
 
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.page.html',
-  styleUrls: ['./login-page.page.scss'],
+  selector: 'app-login-taxi',
+  templateUrl: './login-taxi.page.html',
+  styleUrls: ['./login-taxi.page.scss'],
    
 })
-export class LoginPagePage implements OnInit {
+export class LoginTaxiPage implements OnInit {
   
+  public loginForm: FormGroup;
+  public loading: HTMLIonLoadingElement;
+
 
   
-  username: string = ""
-  password: string = ""
-  title: string = ""
-  email: string = ""
-  phonenumber: string = ""
-  dob: string =  ""
-  
-  
-
-public loginForm: FormGroup;
-public loading: HTMLIonLoadingElement;
 
   constructor(
     public afAuth: AngularFireAuth,
     public formBuilder: FormBuilder,
-    private router: Router,
-    public user: UserService,
+    public router: Router,
+    public taxi: TaxiService,
     public afstore: AngularFirestore,
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
     private authService: AuthService
-   
-    ) { 
+    
 
-      this.loginForm = this.formBuilder.group({
-        username: ['',
-          Validators.compose([Validators.minLength(4), Validators.required])],
-        password: [
-          '',
-          Validators.compose([Validators.required, Validators.minLength(6)]),
-        ],
-      });
-    }
+       ) { 
+
+        this.loginForm = this.formBuilder.group({
+          username: ['',
+            Validators.compose([Validators.minLength(4), Validators.required])],
+          password: [
+            '',
+            Validators.compose([Validators.required, Validators.minLength(6)]),
+          ],
+        });
+      }
+    
 
   ngOnInit() {
   }
+
   
 
-  async loginUser(loginForm: FormGroup): Promise<void> {
+  async loginTaxi(loginForm: FormGroup): Promise<void> {
     if (!loginForm.valid) {
       console.log('Form is not valid yet, current value:', loginForm.value);
     } else {
@@ -67,8 +62,10 @@ public loading: HTMLIonLoadingElement;
   
       const username = loginForm.value.username;
       const password = loginForm.value.password;
+
+    
   
-      this.authService.loginUser(username, password).then(
+      this.authService.loginTaxi(username, password).then(
         () => {
           this.loading.dismiss().then(() => {
             this.router.navigateByUrl('homepage');
@@ -87,3 +84,4 @@ public loading: HTMLIonLoadingElement;
     }
   }
 }
+

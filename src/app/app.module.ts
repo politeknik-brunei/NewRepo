@@ -12,7 +12,8 @@ import { PayPal } from '@ionic-native/paypal/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import firebaseConfig from './firebase'
+// import firebaseConfig from './firebase'
+import { firebaseConfig } from './credentials'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth'
 import { AngularFireDatabaseModule} from 'angularfire2/database'
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 // import { AngularFirestore } from '@angular/fire/firestore'
 import { UserService } from './user.service';
+import {AuthService} from './auth.service'
 
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
@@ -65,6 +67,7 @@ import { SMS } from '@ionic-native/sms/ngx';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     UserService, 
     AngularFireModule,
+    AuthService
    
     
   ],

@@ -16,6 +16,8 @@ ion-toolbar{
         height: 20px; 
     }
   
+    
+
 
 .row:after {
     content: "";
@@ -35,6 +37,9 @@ ion-content{
 
     --ion-background-color: #5BC2E7;
 }
+
+
+
 
 form {
     margin-bottom: 32px;
@@ -70,11 +75,14 @@ form {
     .item-inner {
       border-bottom: 0 !important;
     }
-    section {
-        margin-top: 1em;
-        margin-bottom: 2em;
-      }
+
+section {
+    margin-top: 5em;
+    margin-bottom: 2em;
   }
+}
+
+
 
 
 

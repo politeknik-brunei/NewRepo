@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-homepage',
@@ -9,7 +8,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomepagePage implements OnInit {
 
-  constructor(public alertController: AlertController) {}
+  constructor(
+    public alertController: AlertController,
+    private menuCtrl: MenuController) {}
 
   async presentAlert(){
     const alert = await this.alertController.create({
@@ -35,8 +36,12 @@ export class HomepagePage implements OnInit {
     await alert.present();
   }
 
-
   ngOnInit() {
   }
 
+  openMenu(){
+    this.menuCtrl.toggle();
+  }
+
 }
+

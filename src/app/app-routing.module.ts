@@ -28,6 +28,10 @@ const routes: Routes = [
   { path: 'uploader', loadChildren: './uploader/uploader.module#UploaderPageModule' },
   { path: 'userprofile-page', loadChildren: './userprofile-page/userprofile-page.module#UserprofilePagePageModule' },
   { path: 'watertaxihome', loadChildren: './watertaxihome/watertaxihome.module#WatertaxihomePageModule' },
+  { path: 'login-taxi', loadChildren: './login-taxi/login-taxi.module#LoginTaxiPageModule' },
+  { path: 'login-bus', loadChildren: './login-bus/login-bus.module#LoginBusPageModule' },
+  // { path: 'sidemenu', loadChildren: './sidemenu/sidemenu.module#SidemenuPageModule' },
+  { path: 'reset-password', loadChildren: './reset-password/reset-password.module#ResetPasswordPageModule' },
 
 ];
 

@@ -5,26 +5,24 @@ import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 
-
-interface taxi{
+interface bus{
   username: string, 
   uid: string,
-  
-}
 
+}
+  
 
 @Injectable({
   providedIn: 'root'
 })
-export class TaxiService {
 
-  private taxi:taxi
+export class BusService {
+  private bus:bus
   public isDriver = false;
 
   constructor(
     private afAuth: AngularFireAuth,
-    public http: Http,
-   
+    public http: Http
  ) { }
   
   ngOnInit() {
@@ -32,38 +30,36 @@ export class TaxiService {
       if (driver) {
         firebase
           .firestore()
-          .doc(`/TaxiDrivers/${driver.uid}`)
+          .doc(`/userProfile/${driver.uid}`)
           .get()
-          .then(taxiDriversSnapshot => {
-            this.isDriver = taxiDriversSnapshot.data().isDriver;
+          .then(userProfileSnapshot => {
+            this.isDriver = userProfileSnapshot.data().isDriver;
           });
       }
     });
   }
 
-  setUser(taxi:taxi) {
-    this.taxi = taxi
+  setUser(bus:bus) {
+    this.bus = bus
   }
   getUID(){
     
-    if(!this.taxi){
+    if(!this.bus){
       if(this.afAuth.auth.currentUser){
-        const taxi = this.afAuth.auth.currentUser
+        const bus = this.afAuth.auth.currentUser
         this.setUser({
-          username: taxi.email.split('@')[0],
-          uid:taxi.uid,
+          username: bus.email.split('@')[0],
+          uid:bus.uid,
           
         })
-        return taxi.uid
+        return bus.uid
       } else {
         throw new Error("User not logged in")
       }
     } else {
-      return this.taxi.uid
+      return this.bus.uid
     }
 
   
   }
   }
-
-

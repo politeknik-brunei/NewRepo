@@ -8,7 +8,7 @@
          
           <div class="column">
                 <ion-button fill="clear">
-                  <ion-menu-button><ion-icon name="settings"></ion-icon></ion-menu-button>
+                  <ion-menu-button (click) ="openMenu()"><ion-icon name="settings"></ion-icon></ion-menu-button>
                 </ion-button>
           </div>
 
@@ -52,7 +52,7 @@
                 
                 <div class="btn">
                   
-                <ion-button fill="clear" [routerLink] = "['/bustypes']">
+                <ion-button fill="clear" [routerLink] = "['/busmap']">
               
                   <div class="bawah">
                     

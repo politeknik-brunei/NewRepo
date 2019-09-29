@@ -22,43 +22,62 @@
 </ion-header>
 
 <ion-content padding>
-    <form [formGroup]="loginForm">
+  <form [formGroup]="loginForm">
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input
+        formControlName="username"
+        type="username"
+        placeholder="Enter your username"
+        [class.invalid]="!loginForm.controls['username'].valid &&
+        loginForm.controls['username'].touched"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item
+      class="error-message"
+      *ngIf="!loginForm.controls['username'].valid &&
+         loginForm.controls['username'].touched"
+    >
+      <ion-label>Please enter your username.</ion-label>
+    </ion-item>
   
-      <ion-item>      
-        <ion-label position="floating">Username</ion-label>
-        <ion-input formControlName="username"  type="text"  placeholder="username" [(ngModel)]="username"></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input
+        formControlName="password"
+        type="password"
+        placeholder="Enter your password"
+        [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item
+      class="error-message"
+      *ngIf="!loginForm.controls['password'].valid
+        && loginForm.controls['password'].touched"
+    >
+      <ion-label>Your password needs more than 6 characters.</ion-label>
+    </ion-item>
 
-      <div class="error-messages">
-        <ng-container *ngFor="let error of error_messages.username">
-          <div class="error-message" *ngIf="loginForm.get('username').hasError(error.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)">
-            {{ error.message }}
-          </div>
-        </ng-container>
-      </div>
-      
-      <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input formControlName="password"  type="password" placeholder="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
-
-      <div class="error-messages">
-          <ng-container *ngFor="let error of error_messages.password">
-            <div class="error-message" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
-              {{ error.message }}
-            </div>
-          </ng-container>
-        </div>
-
- <section>
-  <ion-button (click)="login()" [disabled]="!loginForm.valid"  fill="solid" expand="block" color="primary">Login</ion-button>
-
+  <section>
+    <ion-button
+      (click)="loginUser(loginForm)"
+      expand="block"
+      [disabled]="!loginForm.valid"
+    >
+      Log In
+    </ion-button>
+    </section>
+  </form>
   
-  <ion-button expand="block" fill="clear" color="dark"  href="/signup-page">Don't have an account? Create one</ion-button>
-   
-  <ion-button expand="block" fill="clear" color="dark" (click)="resetPassword('hello@angularfirebase.com')">Forgot Password?</ion-button>
   
-  </section>
+  <ion-button expand="block" fill="clear" color="dark"  routerLink="/signup-page">
+    Create a new account
+  </ion-button>
   
-</form>
+  <ion-button expand="block" fill="clear" color="dark" routerLink="/reset-password">
+    Forgot password?
+  </ion-button>
+
 </ion-content>
