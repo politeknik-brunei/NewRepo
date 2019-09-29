@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms'
 // import { CallNumber } from '@ionic-native/call-number/ngx';
 import { AngularFireDatabase } from 'angularfire2/database';
 import {firebaseConfig}  from './credentials';
+// import { AngularFireDatabase } from 'angularfire2/database';
+// import firebaseConfig from './firebase'
 import * as firebase from 'firebase/app';
 import { AngularFirestore } from '@angular/fire/firestore'
 
@@ -19,6 +21,7 @@ import { AngularFirestore } from '@angular/fire/firestore'
 
 export class AppComponent {
 
+  
 
   constructor(
     private platform: Platform,
